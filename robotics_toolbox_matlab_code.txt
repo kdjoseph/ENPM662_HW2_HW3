@@ -1,0 +1,37 @@
+% This code assumes you have the Peter Corke Robotics Toolbox installed.
+% Instructions for installing the toolbox can be found at:
+% http://petercorke.com/wordpress/toolboxes/robotics-toolbox
+
+% Define the UR3 robot using Denavit-Hartenberg parameters
+% The DH table from the Python code is:
+% dh_table = ((theta1+sp.pi/2, sp.pi/2, 0, 0.1833),
+%             (theta2+sp.pi/2, 0, 0.73731, 0),
+%             (theta3, 0, 0.3878, 0),
+%             (theta4+sp.pi/2, sp.pi/2, 0, -0.0955),
+%             (theta5, sp.pi/2, 0, 0.1155),
+%             (theta6, 0, 0, 0.0768))
+
+% Create the links
+L1 = Link('d', 0.1833, 'a', 0, 'alpha', pi/2, 'offset', pi/2);
+L2 = Link('d', 0, 'a', 0.73731, 'alpha', 0, 'offset', pi/2);
+L3 = Link('d', 0, 'a', 0.3878, 'alpha', 0, 'offset', 0);
+L4 = Link('d', -0.0955, 'a', 0, 'alpha', pi/2, 'offset', pi/2);
+L5 = Link('d', 0.1155, 'a', 0, 'alpha', pi/2, 'offset', 0);
+L6 = Link('d', 0.0768, 'a', 0, 'alpha', 0, 'offset', 0);
+
+% Create the robot
+UR3 = SerialLink([L1 L2 L3 L4 L5 L6], 'name', 'UR3');
+
+% Display the robot
+UR3.plot([0 0 0 0 0 0]);
+
+% Create a GUI to control the robot
+UR3.teach();
+
+% The joint angles can be set directly
+% q = [0, 0, 0, 0, 0, 0]; % Example joint angles
+% UR3.plot(q);
+
+%To find the end effector position
+%T = UR3.fkine(q);
+%disp(T);
