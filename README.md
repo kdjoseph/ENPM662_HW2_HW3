@@ -1,6 +1,6 @@
 # UR3 ROBOT ARM SIMULATION
 
-This repo contains code files that determine the forward and inverse kinematics equations, and dynamics equations for a UR3 robot, and simulates and plots the robots motion while drawing a custom-shape made of a semi-circle and part of rectangle. One of the code files recreates the same simulation with the additional constraint that the robot applies & maintains 5Nm of force on the wall during the drawing. The robot dynamics equations were used to determine the equired joint torques for this requirement. 
+This repo contains code files that determine the forward and inverse kinematics equations, and dynamics equations for a UR3 robot manipulator, and simulates and plots the robots motion while drawing a custom-shape made of a semi-circle and part of rectangle. One of the code files recreates the same simulation with the additional constraint that the robot applies & maintains 5Nm of force on the wall during the drawing. The robot dynamics equations were used to determine the equired joint torques for this requirement. 
 
 ## Code Files
 
