@@ -1,10 +1,10 @@
 # UR3 ROBOT ARM SIMULATION
 
-This repo contains code files that determine the forward position kinematics, forward & inverse velocity kinematics equations, and dynamics equations for UR3 robot, and simulates and plots the robots motion while drawing a custom-shape made of a semi-circle and part of rectangle. One of the code files recreates the same simulation with the additional constraint that the robot applies & maintains 5Nm of force on the wall during the drawing. The robot dynamics equations were used to determine the joint required joint torques for this requirement. 
+This repo contains code files that determine the forward and inverse kinematics equations, and dynamics equations for UR3 robot, and simulates and plots the robots motion while drawing a custom-shape made of a semi-circle and part of rectangle. One of the code files recreates the same simulation with the additional constraint that the robot applies & maintains 5Nm of force on the wall during the drawing. The robot dynamics equations were used to determine the equired joint torques for this requirement. 
 
 ## Code Files
 
-There are 4 python code files, 1 Text file containg Matlab code, 2 PDF reports:
+There are 4 python code files, 1 Text file containg Matlab code, and 2 PDF reports:
 
 -   `hw2_problem1_code.py`: Prints the end-effector's homogeneous transform matrix equation,then a prompt will display asking the user if they would like to
     perform the validation of these equations by entering joint angles. If the user chooses yes, then they will be prompted to enter six joint angles. 
